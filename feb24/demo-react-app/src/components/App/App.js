@@ -1,18 +1,21 @@
 import "./App.css";
 import Greetings from "../Greetings/Greetings";
-import Date from "../Date/Date";
+import Dates from "../Dates/Dates";
 
 function App() {
+    const num = 11;
     return (
         <div className="App">
             <p>Hello from App.js</p>
-            <Date />
+            <p>My number is: {num}</p>
+
+            <Dates />
 
             <hr />
 
-            <Greetings />
-            <Greetings />
-            <Greetings />
+            <Greetings name="A1" age="25" />
+            <Greetings name="B1" age="26" />
+            <Greetings name="C1" age="27" />
         </div>
     );
 }

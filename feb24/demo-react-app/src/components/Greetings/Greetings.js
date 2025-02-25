@@ -1,11 +1,14 @@
 import "./Greetings.css";
-import Date from "../Date/Date";
 
-function Greetings() {
+function Greetings(props) {
+    console.log("Greeting's props", props); // { name: "", age: "" }
+    const name = props.name;
+    const age = props.age;
     return (
         <div>
-            <p>Greetings from another functional component</p>
-            <Date />
+            <p>
+                Greetings to {name} @ {age}
+            </p>
         </div>
     );
 }
