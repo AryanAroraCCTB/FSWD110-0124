@@ -1,7 +1,7 @@
 import "./Dates.css";
+import { today, yesterday } from "../../utils/date-utils";
 
 function Dates() {
-    const today = new Date();
     return <p>Today's date is {today.toDateString()}</p>;
 }
 
