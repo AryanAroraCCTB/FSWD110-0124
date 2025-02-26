@@ -1,0 +1,25 @@
+.DynamicClass {
+    margin: 10px;
+    font-size: 10px;
+}
+
+.night {
+    background: darkslategray;
+    color: wheat;
+    text-align: center;
+    padding: 5px;
+    letter-spacing: 0.3px;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+}
+
+.day {
+    background: wheat;
+    color: darkslategray;
+    text-align: center;
+    padding: 5px;
+    letter-spacing: 0.3px;
+    border: 1px solid darkslategray;
+    border-radius: 5px;
+    text-shadow: 2px 2px 6px;
+}
