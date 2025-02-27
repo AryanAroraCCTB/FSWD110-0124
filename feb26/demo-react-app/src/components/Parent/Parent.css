@@ -1,0 +1,6 @@
+.parent {
+    margin: 40px;
+    border: 6px solid red;
+    border-radius: 7px;
+    text-align: center;
+}
