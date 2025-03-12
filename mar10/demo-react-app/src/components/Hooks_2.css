@@ -1,0 +1,14 @@
+.Hooks_2 {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 3px;
+}
+
+.todo {
+    font-size: 10px;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
+}

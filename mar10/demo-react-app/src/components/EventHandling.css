@@ -1,0 +1,20 @@
+.EventHandling {
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    margin: 100px auto;
+    padding: 50px;
+}
+
+.Details {
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+}
+
+.Details input {
+    margin: 5px;
+}
