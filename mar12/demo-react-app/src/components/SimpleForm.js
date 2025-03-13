@@ -2,14 +2,17 @@ import { useState } from "react";
 import "./SimpleForm.css";
 
 const SimpleForm = () => {
-    const [fname, setFname] = useState("test");
-    const [lname, setLname] = useState("test");
+    const [fname, setFname] = useState("");
+    const [lname, setLname] = useState("");
 
     const handleInputChange = (event) => {
-        console.log(event.target.value, event.target.name);
+        if (event.target.name === "fname") {
+            setFname(event.target.value);
+        }
 
-        setFname();
-        setLname();
+        if (event.target.name === "lname") {
+            setLname(event.target.value);
+        }
     };
 
     const handleSubmit = (event) => {
@@ -29,12 +32,12 @@ const SimpleForm = () => {
             <form onSubmit={handleSubmit}>
                 <div className="inputs">
                     <label htmlFor="fname">First Name</label>
-                    <input name="fname" value={fname} type="text" placeholder="First Name" onChange={handleInputChange} />
+                    <input name="fname" value={fname} type="text" placeholder="First Name" onChange={handleInputChange} required />
                 </div>
 
                 <div className="inputs">
                     <label htmlFor="lname">Last Name</label>
-                    <input name="lname" value={lname} type="text" placeholder="Last Name" onChange={handleInputChange} />
+                    <input name="lname" value={lname} type="text" placeholder="Last Name" onChange={handleInputChange} required />
                 </div>
 
                 <button type="submit">Submit</button>

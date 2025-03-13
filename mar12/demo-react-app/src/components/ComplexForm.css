@@ -1,0 +1,18 @@
+.ComplexForm {
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+}
+
+.inputs {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid blue;
+}
+
+.inputs label {
+    border: 1px solid green;
+    margin: 10px;
+    padding: 5px 3px;
+}
