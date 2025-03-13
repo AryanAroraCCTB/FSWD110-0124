@@ -9,10 +9,16 @@ const ComplexForm = () => {
 
     const handleInputChange = (event) => {
         if (event.target.name === "fname") {
-            setUserInfo();
+            setUserInfo({
+                fname: event.target.value,
+                lname: userInfo.lname,
+            });
         }
         if (event.target.name === "lname") {
-            setUserInfo();
+            setUserInfo({
+                fname: userInfo.fname,
+                lname: event.target.value,
+            });
         }
     };
 
