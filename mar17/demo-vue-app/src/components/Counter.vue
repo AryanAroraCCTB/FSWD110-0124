@@ -1,5 +1,12 @@
 <script setup>
-import { ref, reactive } from "vue";
+import { ref, reactive, defineProps } from "vue";
+
+defineProps({
+    initialValue: {
+        type: Number,
+        required: true,
+    },
+});
 
 const count = ref(3); // same as useState(3) in react
 
@@ -23,6 +30,7 @@ function toggleStatus() {
 <template>
     <div>
         <h1 class="heading">{{ state.greeting }}</h1>
+        <p>Initial Value: {{ initialValue }}</p>
         <p>Counter: {{ count }}</p>
         <p>Counter 2: {{ state.count }}</p>
 

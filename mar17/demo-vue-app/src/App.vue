@@ -3,7 +3,7 @@ import Counter from "./components/Counter.vue";
 </script>
 
 <template>
-    <Counter />
+    <Counter initialValue="11" />
 </template>
 
 <style scoped>
