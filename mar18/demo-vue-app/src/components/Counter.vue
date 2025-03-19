@@ -21,7 +21,6 @@ watch(loggedInAccount, (newLogin, oldLogin) => {
 });
 
 const incrementHandler = (event, num) => {
-    console.log(num);
     count.value += num;
 };
 
@@ -31,6 +30,12 @@ const decrementHandler = (event, num) => {
 
 const countChangeHandler = (event, message) => {
     console.log(message);
+
+    changeByNumber.value = parseInt(event.target.value);
+};
+
+const handleBtnClick = (event) => {
+    console.log(`button clicked`);
 };
 </script>
 
@@ -42,10 +47,23 @@ const countChangeHandler = (event, message) => {
 
         <div class="container">
             <input type="number" placeholder="Enter a number..." @input="(event) => countChangeHandler(event, `inputing...`)" />
+
+            <input type="text" placeholder="Enter a name..." v-on:input="(event) => handleBtnClick(event)" />
         </div>
 
-        <button @click="(event) => incrementHandler(event, 3)">Increment</button>
-        <button @click="(event) => decrementHandler(event, 3)">Decrement</button>
+        <button @click="(event) => incrementHandler(event, changeByNumber)">Increment</button>
+        <button @click="(event) => decrementHandler(event, changeByNumber)">Decrement</button>
+        <button v-on:click="handleBtnClick">Click Me</button>
+
+        <button v-on:click="handleBtnClick">
+            Click Me 2
+            <button v-on.stop:click="handleBtnClick">Click Me</button>
+        </button>
+
+        <button @click="handleBtnClick">
+            Click Me 2
+            <button @click.stop="handleBtnClick">Click Me</button>
+        </button>
     </div>
 </template>
 
