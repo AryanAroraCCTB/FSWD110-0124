@@ -1,6 +1,10 @@
 <script setup>
 import { ref, watch } from "vue";
 
+defineProps({
+    products: [],
+});
+
 const count = ref(11);
 
 const changeByNumber = ref(0);

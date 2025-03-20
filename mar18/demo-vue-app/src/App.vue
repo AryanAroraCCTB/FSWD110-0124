@@ -1,18 +1,34 @@
 <script setup>
-import Counter from "./components/Counter.vue";
-import ConditionalRender from "./components/ConditionalRender.vue";
-import Binding from "./components/Binding.vue";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
     <div>
-        <!-- <Counter /> -->
-        <!-- <ConditionalRender /> -->
-        <Binding />
+        <router-link to="/counter" class="nav-btns">Counter Page</router-link>
+        <RouterLink to="/render" class="nav-btns">Render Page</RouterLink>
+        <RouterLink to="/bind" class="nav-btns">Bind Page</RouterLink>
+
+        <div class="bad-practice">
+            <a href="/counter">Counter Page</a>
+            <a href="/render">Render Page</a>
+            <a href="/bind">Bind Page</a>
+        </div>
+
+        <RouterView></RouterView>
     </div>
 </template>
 
 <style scoped>
+.bad-practice {
+    border: 3px double red;
+    margin: 10px;
+    padding: 10px;
+}
+.nav-btns,
+a {
+    margin: 10px;
+    padding: 10px;
+}
 .logo {
     height: 6em;
     padding: 1.5em;
