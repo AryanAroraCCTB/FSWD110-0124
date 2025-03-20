@@ -1,12 +1,14 @@
 <script setup>
 import Counter from "./components/Counter.vue";
 import ConditionalRender from "./components/ConditionalRender.vue";
+import Binding from "./components/Binding.vue";
 </script>
 
 <template>
     <div>
         <!-- <Counter /> -->
-        <ConditionalRender />
+        <!-- <ConditionalRender /> -->
+        <Binding />
     </div>
 </template>
 
